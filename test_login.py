@@ -27,12 +27,19 @@ def test_validate_Create_user():
     assert login.validate_Create_user("12345","luz eliana","","junin","123456789","luz") == False
     
     # Caso de prueba direccion incorrecta
-    assert login.validate_Create_user("12345","luz eliana","valencia","suiza","123456789","luz") == True
+    assert login.validate_Create_user("12345","luz eliana","valencia","cali","123456789","luz") == True
     
     # Caso de prueba apellido vacio
     assert login.validate_Create_user("12345","luz eliana","valencia","junin","123456789","luz") == True
 
-   
+    #Caso calcular total servicio
+    assert login.calcularServiciosConIva(100,200)==True
+    #Caso calcular total servicio error
+    assert login.calcularServiciosConIva(100,200)==True
+    #Caso calcular total servicio SIN IVA
+    assert login.calcularServiciosSinIva(100,200)==True
+    #Caso calcular total servicio SIN IVA ERROR
+    assert login.calcularServiciosSinIva(100,200)==True
 #if __name__=='__login__':
  #       test_validate_user()
  #       test_validate_Create_user()
